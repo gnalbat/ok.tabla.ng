@@ -5,8 +5,8 @@ Open the curtains.
 
 [[about|What's this?]]
 
-[[archival/index]]
+[[archival/index|Archival]]
 
-[[tinker|Tinkering]]
+[[tinkering/index|Tinkering]]
 
 [[writings/index|Writings]]
