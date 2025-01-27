@@ -1,6 +1,12 @@
 ---
-title: Welcome to Quartz
+title: An Introduction to the Album
 ---
+Open the curtains.
 
-This is a blank Quartz installation.
-See the [documentation](https://quartz.jzhao.xyz) for how to get started.
+[[about|What's this?]]
+
+[[archival/index]]
+
+[[tinker|Tinkering]]
+
+[[writings/index|Writings]]
