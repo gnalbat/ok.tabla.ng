@@ -23,7 +23,7 @@ function coerceDate(fp: string, d: any): Date {
     )
   }
 
-  return invalidDate ? new Date() : dt
+  return invalidDate ? new Date(0) : dt
 }
 
 type MaybeDate = undefined | string | number
@@ -76,6 +76,11 @@ export const CreatedModifiedDate: QuartzTransformerPlugin<Partial<Options>> = (u
               created: coerceDate(fp, created),
               modified: coerceDate(fp, modified),
               published: coerceDate(fp, published),
+            }
+
+            const unixepoch = new Date(0)
+            if (file.data.dates.created.getTime() === unixepoch.getTime()) {
+              delete file.data.dates;
             }
           }
         },

@@ -1,12 +1,16 @@
 ---
-title: An Introduction to the Album
+title: An Introduction to the Album*
 ---
-Open the curtains.
+Open the \[figurative\] curtains.
 
 [[about|What's this?]]
 
-[[archival/index|Archival]]
+[[archives/index|Archives]]
 
-[[tinkering/index|Tinkering]]
+[[tinkerings/index|Tinkerings]]
 
 [[writings/index|Writings]]
+
+
+
+*\*Apologies to The Hotelier*

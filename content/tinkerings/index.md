@@ -1,5 +1,4 @@
 ---
 title: Tinkering
-date:
 ---
 Soon
