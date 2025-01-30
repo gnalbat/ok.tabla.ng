@@ -5,7 +5,6 @@ tags:
   - webdev
   - django
   - drf
-  - django-rest-framework
 ---
 
 I'm confused since [Github](https://github.com/encode/django-rest-framework/issues/7262) [issues](https://github.com/encode/django-rest-framework/issues/8910)  for DRF and some Stackoverflow and Reddit (ew!) threads seem to indicate that multipart/form data http requests are impossible. But on cases where you need file uploads on related models, it's like a troublesome task to write custom functions

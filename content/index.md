@@ -7,10 +7,10 @@ Open the \[figurative\] curtains.
 
 [[archives/index|Archives]]
 
-[[tinkerings/index|Tinkerings]]
+[[tinkerings/index|Tinkering]]
 
 [[writings/index|Writings]]
 
-
+[[notes/index|Notes]]
 
 *\*Apologies to The Hotelier*
