@@ -1,5 +1,6 @@
 ---
 date: 2025-01-29
+title: The Squibs - Hello Sleepyhead (2013)
 ---
 ![[5059504365172_cover-1.jpg|300]]
 
