@@ -15,6 +15,4 @@ Random musings (not of a cigarette smoking man**).
 
 [[notes/index|Notes]]
 
-*\*Apologies to The Hotelier*
-*\*\*Apologies to The X-Files*
-*\*\*\*Apologies to Radiohead*
+*\*Apologies to The Hotelier*<br>*\*\*Apologies to The X-Files*<br>*\*\*\*Apologies to Radiohead*

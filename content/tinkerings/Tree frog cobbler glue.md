@@ -4,6 +4,7 @@ date: 2025-02-14
 tldr: patience is key. learn from experience. don't cheap out.
 
 So I bought one of these B7000-looking glue called Tree Frog Cobbler Glue from a local online platform. I liked tree frog's CA glue \' cause it doesn't dry up so easily and the hold is strong.
+
 ![[Pasted image 20250214012201.jpg|300]]
 
 I initially liked this one for phone repairs since it actually holds up unlike my experience with B7000s before. I had successfully repaired numerous phones until I had to repair my iPhone 11 I got from my brother and was annoyed that one corner of the screen wouldn't sit flush with the housing. 
