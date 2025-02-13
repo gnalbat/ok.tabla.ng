@@ -3,7 +3,9 @@ title: An Introduction to the Album*
 ---
 Open the \[figurative\] curtains.
 
-[[about|What's this?]]
+Random musings (not of a cigarette smoking man**).
+
+[[about|What's this?]]***
 
 [[archives/index|Archives]]
 
@@ -14,3 +16,5 @@ Open the \[figurative\] curtains.
 [[notes/index|Notes]]
 
 *\*Apologies to The Hotelier*
+*\*\*Apologies to The X-Files*
+*\*\*\*Apologies to Radiohead*
