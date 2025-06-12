@@ -2,7 +2,7 @@
 title: Git, [for] Windows, and SSH
 date: 2025-06-12
 ---
-To my astonishment, I spent almost 2 hours solving this. I have Git for Windows from scoop and moved to using ssh for Git since Visual Studio Code's CredentialHelper keeps pestering me, popping up whenever I use VSCode's source control and won't remember the "Always use this from now on" setting (why put it if it doesn't work?)
+To my astonishment, I spent almost 2 hours solving this. I have Git for Windows from scoop and moved to using ssh for Git since CredentialHelper selector keeps popping up whenever I interact with the remote and won't remember the "Always use this from now on" setting (why put it if it doesn't work?)
 
 So the key gets loaded in ssh-agent but git won't fetch it. Then I find out that Git for Windows **bundles it's own ssh binary**! For context, Windows has included OpenSSH since Windows 10 1803.<sup>[1]</sup> What a waste of time. Thanks, Stack Overflow.
 
