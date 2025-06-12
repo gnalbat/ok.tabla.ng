@@ -14,6 +14,6 @@ The phone already had a replaced battery and screen (an LCD one). Battery was al
 But to fix it cheap I wanted to repair it myself, just cause someone my friend knew quoted a price thrice the price of a decent battery. So I got into it, replaced the battery successfully, but broke the earpiece flex. What an expensive mistake! Since retaining FaceID and true tone required paired parts with serial number. To cheap out again I decided just to replace the earpiece assembly myself at the cost of FaceID and true tone. It ***WAS*** finally done until I put the too much of the cobbler glue due to my slight annoyance of the corner that wouldn't sit flush and it f\*\*\*ing fried the LCD screen! I thought this type of glue was not conductive. Now my total cost was even more than the initial quotation for battery replacement. And lost FaceID. Goodness gracious.
 
 ![[Pasted image 20250214012822.jpg]]
-The glue also burns out plastic (see the taptic engine on the left and the speaker on the right). I actually experience it before trying to fix a mouse whose skates won't stay straight. Maybe I should be content with how things are. Or maybe I should hyperfixate and break things even more!
+The glue also burns out plastic (see the taptic engine on the left and the speaker on the right). I actually experienced it before trying to fix a mouse whose skates won't stay straight. Maybe I should be content with how things are. Or maybe I should hyperfixate and break things even more!
 
 I don't know if B7000 does that also. 
