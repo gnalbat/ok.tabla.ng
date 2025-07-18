@@ -1,5 +1,7 @@
 ---
 date: 2025-02-14
+tags:
+  - tech
 ---
 tldr: patience is key. learn from experience. don't cheap out.
 

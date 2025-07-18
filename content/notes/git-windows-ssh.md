@@ -1,6 +1,8 @@
 ---
 title: Git, [for] Windows, and SSH
 date: 2025-06-12
+tags:
+  - tech
 ---
 To my astonishment, I spent almost 2 hours solving this. I have Git for Windows from scoop and moved to using ssh for Git since CredentialHelper selector keeps popping up whenever I interact with the remote and won't remember the "Always use this from now on" setting (why put it if it doesn't work?)
 

@@ -1,5 +1,7 @@
 ---
 title: Archives
+tags:
+  - list
 ---
 Of things lost to time.
 

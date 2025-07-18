@@ -1,6 +1,8 @@
 ---
 title: Smart Physical SIM to eSIM
 date: 2025-02-16
+tags:
+  - tech
 ---
 After I [[Tree frog cobbler glue|broke my iPhone 11]] I realized that the glue had actually gotten inside the SIM module and melted some plastic off my prepaid Sun Cellular SIM card ([RIP to the brand](https://en.wikipedia.org/wiki/Sun_Cellular#Transition_to_Smart_(2016%E2%80%932022)), favorite network of Filipino teenagers late 2000s and early 2010s for their cheap unlimited texts and calls).
 
