@@ -1,18 +1,26 @@
 @use "../../styles/variables.scss" as *;
 
+// Date styling for CustomExplorer entries
+.custom-explorer-date {
+  color: var(--gray-500, #888);
+  font-size: 0.85em;
+  margin-left: 0.5em;
+  white-space: nowrap;
+}
+
 @media all and ($mobile) {
   .page > #quartz-body {
-    // Shift page position when toggling Explorer on mobile.
-    & > :not(.sidebar.left:has(.explorer)) {
+    // Shift page position when toggling CustomExplorer on mobile.
+    & > :not(.sidebar.left:has(.custom-explorer)) {
       transition: transform 300ms ease-in-out;
     }
-    &.lock-scroll > :not(.sidebar.left:has(.explorer)) {
+    &.lock-scroll > :not(.sidebar.left:has(.custom-explorer)) {
       transform: translateX(100dvw);
       transition: transform 300ms ease-in-out;
     }
 
     // Sticky top bar (stays in place when scrolling down on mobile).
-    .sidebar.left:has(.explorer) {
+    .sidebar.left:has(.custom-explorer) {
       box-sizing: border-box;
       position: sticky;
       background-color: var(--light);
@@ -20,13 +28,13 @@
       margin: 0;
     }
 
-    .hide-until-loaded ~ .explorer-content {
+    .hide-until-loaded ~ .custom-explorer-content {
       display: none;
     }
   }
 }
 
-.explorer {
+.custom-explorer {
   display: flex;
   flex-direction: column;
   overflow-y: hidden;
@@ -56,20 +64,20 @@
     margin-bottom: auto;
   }
 
-  button.mobile-explorer {
+  button.mobile-custom-explorer {
     display: none;
   }
 
-  button.desktop-explorer {
+  button.desktop-custom-explorer {
     display: flex;
   }
 
   @media all and ($mobile) {
-    button.mobile-explorer {
+    button.mobile-custom-explorer {
       display: flex;
     }
 
-    button.desktop-explorer {
+    button.desktop-custom-explorer {
       display: none;
     }
   }
@@ -90,8 +98,8 @@
   }
 }
 
-button.mobile-explorer,
-button.desktop-explorer {
+button.mobile-custom-explorer,
+button.desktop-custom-explorer {
   background-color: transparent;
   border: none;
   text-align: left;
@@ -108,7 +116,7 @@ button.desktop-explorer {
   }
 }
 
-.explorer-content {
+.custom-explorer-content {
   list-style: none;
   overflow: hidden;
   overflow-y: auto;
@@ -210,12 +218,12 @@ li:has(> .folder-outer:not(.open)) > .folder-container > svg {
   color: var(--tertiary);
 }
 
-.explorer {
+.custom-explorer {
   @media all and ($mobile) {
     &.collapsed {
       flex: 0 0 34px;
 
-      & > .explorer-content {
+      & > .custom-explorer-content {
         transform: translateX(-100vw);
         visibility: hidden;
       }
@@ -224,13 +232,13 @@ li:has(> .folder-outer:not(.open)) > .folder-container > svg {
     &:not(.collapsed) {
       flex: 0 0 34px;
 
-      & > .explorer-content {
+      & > .custom-explorer-content {
         transform: translateX(0);
         visibility: visible;
       }
     }
 
-    .explorer-content {
+    .custom-explorer-content {
       box-sizing: border-box;
       z-index: 100;
       position: absolute;
@@ -251,7 +259,7 @@ li:has(> .folder-outer:not(.open)) > .folder-container > svg {
       visibility: hidden;
     }
 
-    .mobile-explorer {
+    .mobile-custom-explorer {
       margin: 0;
       padding: 5px;
       z-index: 101;

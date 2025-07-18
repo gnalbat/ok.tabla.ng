@@ -1,8 +1,8 @@
 import { QuartzComponent, QuartzComponentConstructor, QuartzComponentProps } from "./types"
-import style from "./styles/explorer.scss"
+import style from "./styles/custom-explorer.scss"
 
 // @ts-ignore
-import script from "./scripts/explorer.inline"
+import script from "./scripts/custom-explorer.inline"
 import { classNames } from "../util/lang"
 import { i18n } from "../i18n"
 import { FileTrieNode } from "../util/fileTrie"
@@ -30,21 +30,19 @@ const defaultOptions: Options = {
     return node
   },
   sortFn: (a, b) => {
-    // Sort order: folders first, then files. Sort folders and files alphabeticall
-    if ((!a.isFolder && !b.isFolder) || (a.isFolder && b.isFolder)) {
-      // numeric: true: Whether numeric collation should be used, such that "1" < "2" < "10"
-      // sensitivity: "base": Only strings that differ in base letters compare as unequal. Examples: a ≠ b, a = á, a = A
-      return a.displayName.localeCompare(b.displayName, undefined, {
-        numeric: true,
-        sensitivity: "base",
-      })
-    }
-
-    if (!a.isFolder && b.isFolder) {
-      return 1
-    } else {
+    // Sort order: folders first, then files. Sort by date (newest first)
+    if (a.isFolder && !b.isFolder) {
       return -1
+    } else if (!a.isFolder && b.isFolder) {
+      return 1
     }
+    
+    // Both are folders or both are files - sort by date
+    const aDate = a.data?.date || new Date(0)
+    const bDate = b.data?.date || new Date(0)
+    
+    // Sort newest first (descending order)
+    return new Date(bDate).getTime() - new Date(aDate).getTime()
   },
   filterFn: (node) => node.slugSegment !== "tags",
   order: ["filter", "map", "sort"],
@@ -59,10 +57,10 @@ export default ((userOpts?: Partial<Options>) => {
   const opts: Options = { ...defaultOptions, ...userOpts }
   const { OverflowList, overflowListAfterDOMLoaded } = OverflowListFactory()
 
-  const Explorer: QuartzComponent = ({ cfg, displayClass }: QuartzComponentProps) => {
+  const CustomExplorer: QuartzComponent = ({ cfg, displayClass }: QuartzComponentProps) => {
     return (
       <div
-        class={classNames(displayClass, "explorer")}
+        class={classNames(displayClass, "custom-explorer")}
         data-behavior={opts.folderClickBehavior}
         data-collapsed={opts.folderDefaultState}
         data-savestate={opts.useSavedState}
@@ -75,9 +73,9 @@ export default ((userOpts?: Partial<Options>) => {
       >
         <button
           type="button"
-          class="explorer-toggle mobile-explorer hide-until-loaded"
+          class="custom-explorer-toggle mobile-custom-explorer hide-until-loaded"
           data-mobile={true}
-          aria-controls="explorer-content"
+          aria-controls="custom-explorer-content"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -96,7 +94,7 @@ export default ((userOpts?: Partial<Options>) => {
         </button>
         <button
           type="button"
-          class="title-button explorer-toggle desktop-explorer"
+          class="title-button custom-explorer-toggle desktop-custom-explorer"
           data-mobile={false}
           aria-expanded={true}
         >
@@ -116,15 +114,16 @@ export default ((userOpts?: Partial<Options>) => {
             <polyline points="6 9 12 15 18 9"></polyline>
           </svg>
         </button>
-        <div class="explorer-content" aria-expanded={false}>
-          <OverflowList class="explorer-ul" />
+        <div class="custom-explorer-content" aria-expanded={false}>
+          <OverflowList class="custom-explorer-ul" />
         </div>
-        <template id="template-file">
+        <template id="template-custom-file">
           <li>
             <a href="#"></a>
+            <span class="custom-explorer-date"></span>
           </li>
         </template>
-        <template id="template-folder">
+        <template id="template-custom-folder">
           <li>
             <div class="folder-container">
               <svg
@@ -156,7 +155,7 @@ export default ((userOpts?: Partial<Options>) => {
     )
   }
 
-  Explorer.css = style
-  Explorer.afterDOMLoaded = concatenateResources(script, overflowListAfterDOMLoaded)
-  return Explorer
+  CustomExplorer.css = style
+  CustomExplorer.afterDOMLoaded = concatenateResources(script, overflowListAfterDOMLoaded)
+  return CustomExplorer
 }) satisfies QuartzComponentConstructor
