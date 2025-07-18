@@ -30,6 +30,21 @@ export const defaultContentPageLayout: PageLayout = {
     Component.Search(),
     Component.Darkmode(),
     Component.DesktopOnly(Component.Explorer({
+      sortFn: (a, b) => {
+        // Sort order: folders first, then files. Sort by date (newest first)
+        if (a.isFolder && !b.isFolder) {
+          return -1
+        } else if (!a.isFolder && b.isFolder) {
+          return 1
+        }
+        
+        // Both are folders or both are files - sort by date
+        const aDate = a.data?.date || new Date(0)
+        const bDate = b.data?.date || new Date(0)
+        
+        // Sort newest first (descending order)
+        return new Date(bDate).getTime() - new Date(aDate).getTime()
+      },
       title: "Explorer", // title of the explorer component
       folderClickBehavior: "link", // what happens when you click a folder ("link" to navigate to folder page on click or "collapse" to collapse folder on click)
       useSavedState: true, // whether to use local storage to save "state" (which folders are opened) of explorer
@@ -52,20 +67,20 @@ export const defaultListPageLayout: PageLayout = {
     Component.Darkmode(),
     Component.DesktopOnly(Component.Explorer({
         sortFn: (a, b) => {
-        // Sort order: folders first, then files. Sort by date (newest first)
-        if (a.isFolder && !b.isFolder) {
-          return -1
-        } else if (!a.isFolder && b.isFolder) {
-          return 1
-        }
-        
-        // Both are folders or both are files - sort by date
-        const aDate = a.data?.date || new Date(0)
-        const bDate = b.data?.date || new Date(0)
-        
-        // Sort newest first (descending order)
-        return new Date(bDate).getTime() - new Date(aDate).getTime()
-      },
+          // Sort order: folders first, then files. Sort by date (newest first)
+          if (a.isFolder && !b.isFolder) {
+            return -1
+          } else if (!a.isFolder && b.isFolder) {
+            return 1
+          }
+          
+          // Both are folders or both are files - sort by date
+          const aDate = a.data?.date || new Date(0)
+          const bDate = b.data?.date || new Date(0)
+          
+          // Sort newest first (descending order)
+          return new Date(bDate).getTime() - new Date(aDate).getTime()
+        },
       title: "Explorer", // title of the explorer component
       folderClickBehavior: "link", // what happens when you click a folder ("link" to navigate to folder page on click or "collapse" to collapse folder on click)
       useSavedState: true, // whether to use local storage to save "state" (which folders are opened) of explorer
