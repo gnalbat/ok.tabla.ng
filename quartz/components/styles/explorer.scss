@@ -1,4 +1,12 @@
+
 @use "../../styles/variables.scss" as *;
+// Date styling for Explorer entries
+.explorer-date {
+  color: var(--gray-500, #888);
+  font-size: 0.85em;
+  margin-left: 0.5em;
+  white-space: nowrap;
+}
 
 @media all and ($mobile) {
   .page > #quartz-body {

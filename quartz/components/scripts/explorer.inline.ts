@@ -88,6 +88,29 @@ function createFileNode(currentSlug: FullSlug, node: FileTrieNode): HTMLLIElemen
   a.dataset.for = node.slug
   a.textContent = node.displayName
 
+  // Add date if available
+  const dateSpan = li.querySelector(".explorer-date") as HTMLSpanElement
+  const dateRaw = node.data?.date
+  // Debug: log the date value for troubleshooting
+  // Remove or comment out after confirming
+  // if (typeof window !== 'undefined' && window.console) {
+  //   console.debug('Explorer entry date:', node.displayName, dateRaw)
+  // }
+  let dateStr = ""
+  if (dateRaw) {
+    let d
+    if (typeof dateRaw === "string") {
+      // Try to parse ISO or YYYY-MM-DD string
+      d = new Date(dateRaw)
+    } else if (dateRaw instanceof Date) {
+      d = dateRaw
+    }
+    if (d && !isNaN(d.getTime())) {
+      dateStr = d.toISOString().slice(0, 10)
+    }
+  }
+  dateSpan.textContent = dateStr
+
   if (currentSlug === node.slug) {
     a.classList.add("active")
   }
