@@ -24,7 +24,7 @@ git credential-manager configure
 git credential-manager diagnose
 ```
 
-And it `credential.helper` suddenly pointed to the absolute path of git-credential-manager.
+And `credential.helper` suddenly pointed to the absolute path of git-credential-manager.
 
 ```powershell
 git config --global credential.helper manager
