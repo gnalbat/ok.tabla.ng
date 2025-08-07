@@ -14,7 +14,7 @@ So run this:
  git config --global core.sshCommand C:/Windows/System32/OpenSSH/ssh.exe
 ```
 
-Update:
+Update (12 June 2025):
 
 It started working somehow. 
 
@@ -42,6 +42,20 @@ I changed it to point to scoop git's current symlink.
 [credential]
     helper =  C:/ProgramData/scoop/apps/git/current/mingw64/bin/git-credential-manager.exe
 ```
+
+Update 2 (8 August 2025):
+
+Apparently running `git credential-manager configure` changes the credential section to
+```
+[credential]
+    helper = manager
+    helper =
+    helper = C:/ProgramData/scoop/apps/git/2.49.0/mingw64/bin/git-credential-manager.exe
+```
+
+And it will not work otherwise.
+
+I still don't understand how this works.
 
 1. Durr, Yosef (7 March 2018). ["What's new for the Command Line in Windows 10 version 1803"](https://devblogs.microsoft.com/commandline/windows10v1803/). _Windows Command Line Tools For Developers_.
 2. ["How to run ssh-add on Windows?"](https://stackoverflow.com/questions/18683092/how-to-run-ssh-add-on-windows/68386656#comment133124115_68386656](https://stackoverflow.com/questions/18683092/how-to-run-ssh-add-on-windows/68386656#comment133124115_68386656) _Stack Overflow_. 
