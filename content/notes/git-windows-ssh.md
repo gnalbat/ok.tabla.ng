@@ -58,5 +58,5 @@ And it will not work otherwise.
 I still don't understand how this works.
 
 1. Durr, Yosef (7 March 2018). ["What's new for the Command Line in Windows 10 version 1803"](https://devblogs.microsoft.com/commandline/windows10v1803/). _Windows Command Line Tools For Developers_.
-2. ["How to run ssh-add on Windows?"](https://stackoverflow.com/questions/18683092/how-to-run-ssh-add-on-windows/68386656#comment133124115_68386656](https://stackoverflow.com/questions/18683092/how-to-run-ssh-add-on-windows/68386656#comment133124115_68386656) _Stack Overflow_. 
+2. ["How to run ssh-add on Windows?"](https://stackoverflow.com/questions/18683092/how-to-run-ssh-add-on-windows/68386656#comment133124115_68386656) _Stack Overflow_. 
 3. ["Git does not use SSH key (Windows)."](https://stackoverflow.com/questions/71556140/git-does-not-use-ssh-key-windows) _Stack Overflow_. 
