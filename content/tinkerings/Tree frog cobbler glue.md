@@ -5,7 +5,7 @@ tags:
 ---
 tldr: patience is key. learn from experience. don't cheap out.
 
-So I bought one of these B7000-looking glue called Tree Frog Cobbler Glue from a local online platform. I liked tree frog's CA glue \' cause it doesn't dry up so easily and the hold is strong.
+So I bought one of these B7000-looking glue called Tree Frog Cobbler Glue from a local online platform. I liked tree frog's CA glue \'cause it doesn't dry up so easily and the hold is strong.
 
 ![[Pasted image 20250214012201.jpg|300]]
 
