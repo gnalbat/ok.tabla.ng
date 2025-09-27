@@ -3,10 +3,11 @@ title: Smart Physical SIM to eSIM
 date: 2025-02-16
 tags:
   - tech
+  - lessons-learned
 ---
 After I [[Tree frog cobbler glue|broke my iPhone 11]] I realized that the glue had actually gotten inside the SIM module and melted some plastic off my prepaid Sun Cellular SIM card ([RIP to the brand](https://en.wikipedia.org/wiki/Sun_Cellular#Transition_to_Smart_(2016%E2%80%932022)), favorite network of Filipino teenagers late 2000s and early 2010s for their cheap unlimited texts and calls).
 
-![[Pasted image 20250216223850.png|200]]
+![[sun-lte.png|200]]
 <p style="font-size:0.75rem">SIM card "card" (I don't know what it's called!). Replacement SIM since I got it replaced in 2017 at the Sun Store in Forum Robinsons (<a href="https://en.wikipedia.org/wiki/Forum_Robinsons">again, RIP!</a>) when they <i>finally</i> offered LTE for prepaid subscribers.</p>
 
 It still worked, however loose in phone SIM card slots. I did not want to risk using it since I have experience on SIM cards failing due to getting dislodged while the phone is on.

@@ -3,6 +3,7 @@ title: PLDT deCGNAT and bridge mode
 date: 2025-07-18
 tags:
   - tech
+  - lessons-learned
 ---
 A few months late (got this done on May). You could probably [search in on reddit](https://www.google.com/search?q=site:reddit.com+pldt+bridge+mode+and+cgnat) (thanks, reddit! True reddit moment, rock on redditors)
 
